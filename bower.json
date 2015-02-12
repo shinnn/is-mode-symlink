@@ -1,0 +1,37 @@
+{
+  "name": "is-mode-symlink",
+  "description": "Check if a file mode integer represents symbolic link",
+  "keywords": [
+    "file",
+    "mode",
+    "int",
+    "integer",
+    "number",
+    "symbolic link",
+    "link",
+    "symlink",
+    "check",
+    "detect"
+  ],
+  "main": "browser.js",
+  "homepage": "https://github.com/shinnn/is-mode-symlink",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shinnn/is-mode-symlink.git"
+  },
+  "authors": [
+    {
+      "name": "Shinnosuke Watanabe",
+      "url": "https://github.com/shinnn"
+    }
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.js",
+    "*.json",
+    "*.yml",
+    "coverage",
+    "node_modules"
+  ]
+}
