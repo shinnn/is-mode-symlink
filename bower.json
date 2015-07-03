@@ -25,7 +25,7 @@
       "url": "https://github.com/shinnn"
     }
   ],
-  "license": "MIT",
+  "license": "Unlicense",
   "ignore": [
     "**/.*",
     "*.js",

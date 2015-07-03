@@ -53,6 +53,4 @@ It returns `true` if the number represents file mode of symbolic link, otherwise
 
 ## License
 
-Copyright (c) 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
-
-Licensed under [the MIT License](./LICENSE).
+[The Unlicense](./LICENSE)

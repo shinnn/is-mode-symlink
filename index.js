@@ -1,11 +1,3 @@
-/*!
- * is-mode-symlink | MIT (c) Shinnosuke Watanabe
- * https://github.com/shinnn/is-mode-symlink
-*/
-
-// IFMT: 61440
-// IFLNK: 40960
-
 module.exports = function isModeSymlink(mode) {
   'use strict';
 
@@ -16,5 +8,7 @@ module.exports = function isModeSymlink(mode) {
     );
   }
 
+  // IFMT: 61440
+  // IFLNK: 40960
   return (mode & 61440) === 40960;
 };
