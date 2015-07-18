@@ -14,16 +14,14 @@
     "detect"
   ],
   "main": "browser.js",
+  "moduleType": "globals",
   "homepage": "https://github.com/shinnn/is-mode-symlink",
   "repository": {
     "type": "git",
     "url": "git://github.com/shinnn/is-mode-symlink.git"
   },
   "authors": [
-    {
-      "name": "Shinnosuke Watanabe",
-      "url": "https://github.com/shinnn"
-    }
+    "Shinnosuke Watanabe (https://github.com/shinnn)"
   ],
   "license": "Unlicense",
   "ignore": [
