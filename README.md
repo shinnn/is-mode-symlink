@@ -14,7 +14,7 @@ isModeSymlink(41453) //=> true;
 isModeSymlink(33261) //=> false;
 ```
 
-Like [Node](http://nodejs.org/)'s [`stats.isSymbolicLink()`](https://nodejs.org/api/fs.html#fs_class_fs_stats), but so portable as to work everywhere.
+Like [Node](https://nodejs.org/)'s [`stats.isSymbolicLink()`](https://nodejs.org/api/fs.html#fs_class_fs_stats), but so portable as to work everywhere.
 
 ## Installation
 
@@ -22,13 +22,13 @@ Like [Node](http://nodejs.org/)'s [`stats.isSymbolicLink()`](https://nodejs.org/
 
 #### [npm](https://www.npmjs.com/)
 
-```sh
+```
 npm install is-mode-symlink
 ```
 
 #### [bower](http://bower.io/)
 
-```sh
+```
 bower install is-mode-symlink
 ```
 

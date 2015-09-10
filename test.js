@@ -1,40 +1,35 @@
-'use strict';
+'use strong';
 
-var fs = require('fs');
+const fs = require('fs');
 
-var requireBowerFiles = require('require-bower-files');
-var test = require('tape');
+const {test} = require('tape');
 
 fs.symlinkSync('.gitignore', '__tmp_path__');
 
-var symlinkMode = fs.lstatSync('__tmp_path__').mode;
-var fileMode = fs.lstatSync(__filename).mode;
+const {mode: symlinkMode} = fs.lstatSync('__tmp_path__');
+const {mode: fileMode} = fs.lstatSync(__filename);
 
 fs.unlinkSync('__tmp_path__');
 
 function runTest(description, main) {
-  test(description, function(t) {
+  test(description, t => {
     t.plan(4);
 
     t.equal(main.name, 'isModeSymlink', 'should have a function name.');
 
     t.ok(
       main(symlinkMode),
-      'should return true when the file mode represents symlink, such as ' +
-      symlinkMode +
-      '.'
+      `should return true when the file mode represents symlink, such as ${symlinkMode}.`
     );
 
     t.notOk(
       main(fileMode),
-      'should return true when the file mode doesn\'t represents symlink, such as ' +
-      fileMode +
-      '.'
+      `should return true when the file mode doesn't represents symlink, such as ${fileMode}.`
     );
 
     t.throws(
-      main.bind(null, {foo: 'bar'}),
-      / is not a number\. Argument to is-mode-symlink must be a number\./,
+      () => main({foo: 'bar'}),
+      / is not a number\. Expected a file mode\./,
       'should throw a type error when the argument is not a number.'
     );
   });
@@ -43,6 +38,6 @@ function runTest(description, main) {
 runTest('require(\'is-mode-symlink\')', require('./'));
 
 global.window = {};
-requireBowerFiles({self: true});
+require(`./${require('./bower.json').main}`);
 
-runTest('window.isModeSymlink', window.isModeSymlink);
+runTest('window.isModeSymlink', global.window.isModeSymlink);

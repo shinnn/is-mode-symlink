@@ -1,11 +1,8 @@
 module.exports = function isModeSymlink(mode) {
-  'use strict';
+  'use strong';
 
   if (typeof mode !== 'number') {
-    throw new TypeError(
-      mode +
-      ' is not a number. Argument to is-mode-symlink must be a number.'
-    );
+    throw new TypeError(String(mode) + ' is not a number. Expected a file mode.');
   }
 
   // IFMT: 61440
